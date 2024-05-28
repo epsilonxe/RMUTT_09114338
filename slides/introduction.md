@@ -109,10 +109,14 @@ Provide resources and services (websites, data storage).
 
 # Domain Names and IP Addresses
 
+<div class="columns">
+<div>
+    
 ## IP Address
 - Unique numerical address for each device on the network.
-- Example: `192.168.1.1`
-
+- Example: `192.168.1.1`</div>
+<div>
+    
 ## Domain Name
 - Human-readable address for websites.
 - Example: `www.example.com`
@@ -120,12 +124,14 @@ Provide resources and services (websites, data storage).
 ## DNS (Domain Name System)
 - Translates domain names to IP addresses.
 - Like a phone book for the internet.
+</div>
+</div>
 
 ---
 
 # Internet Service Providers (ISPs)
 
-![bg right:40% fit](figures/thai_isp.png)
+![bg left:40% contain](figures/thai_isp.png)
 
 - Companies that provide internet access to users.
 - Examples: 3BB, True Internet, AIS Fibre, etc.
@@ -133,9 +139,9 @@ Provide resources and services (websites, data storage).
 
 ---
 
-# How Internet Works
+<!-- # How Internet Works -->
 
-![Internet width:900px](figures/internet.webp)
+![bg contain](figures/internet.webp)
 
 
 ---
@@ -187,7 +193,9 @@ Provide resources and services (websites, data storage).
 
 ---
 
-<!-- _class: cool-list -->
+<!-- 
+_class: cool-list 
+-->
 
 # Workshop Activities
 
@@ -202,10 +210,16 @@ Provide resources and services (websites, data storage).
 
 # Installing Development Tools
 
+
+<div class="columns">
+<div>
+
 ## Visual Studio Code (VSCode)
 - Open [code.visualstudio.com](https://code.visualstudio.com/)
 - Download and install for your operating system.
-
+</div>
+<div>
+    
 ## Node.js
 - Open [nodejs.org](https://nodejs.org/)
 - Download the LTS version and install.
@@ -213,6 +227,8 @@ Provide resources and services (websites, data storage).
 ## Git
 - Open [git-scm.com](https://git-scm.com/)
 - Download and install for your operating system.
+</div>
+</div>
 
 ---
 
@@ -267,9 +283,24 @@ p {
 
 ---
 
-# Q&A
+# Supplement Learning Resoures
 
-Feel free to ask any questions you have about the content covered today.
+<div class="columns">
+<div>
+
+<iframe width="90%" height="100%" src="https://www.youtube.com/embed/UB1O30fR-EE?si=lyvgGgHAOZLf4YNq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div>
+
+## HTML Crash Course For Absolute Beginners
+
+By Traversy Media.
+
+A comprehensive introduction to HTML, covering essential concepts and practical steps to create a basic web page.
+</div>
+</div>
+
+
 
 ---
 

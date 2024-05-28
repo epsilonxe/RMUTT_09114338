@@ -92,3 +92,8 @@ section.transition2 strong {
   color: rgb(161, 240, 3);
 
 }
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
