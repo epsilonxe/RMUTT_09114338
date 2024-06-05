@@ -373,6 +373,27 @@ Feel free to ask any questions you have about the content covered today.
 
 ---
 
+---
+
+# Supplement Learning Resoures
+
+<div class="columns">
+<div>
+
+<iframe width="90%" height="100%" src="https://www.youtube.com/embed/UB1O30fR-EE?si=lyvgGgHAOZLf4YNq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div>
+
+## HTML Crash Course For Absolute Beginners
+
+By Traversy Media.
+
+A comprehensive introduction to HTML, covering essential concepts and practical steps to create a basic web page.
+</div>
+</div>
+
+---
+
 # Next Week
 
 ## Topic: CSS Fundamentals

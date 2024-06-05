@@ -47,7 +47,7 @@ theme       : descartes
 
 # Key Components of the Internet
 
-<div class="columns col4">
+<div class="columns">
 
 <div>
 
@@ -131,11 +131,12 @@ Provide resources and services (websites, data storage).
 
 # Internet Service Providers (ISPs)
 
-![bg left:40% contain](figures/thai_isp.png)
+![bg left:40% fit](figures/thai_isp.png)
 
 - Companies that provide internet access to users.
 - Examples: 3BB, True Internet, AIS Fibre, etc.
 - Connect users to the broader internet network.
+
 
 ---
 
@@ -280,26 +281,6 @@ p {
 1. Inside the folder, create an `index.html` file and a `style.css` file.
 1. Copy the basic HTML and CSS structures from the slides into these files.
 1. Open `index.html` in a web browser to see your first web page!
-
----
-
-# Supplement Learning Resoures
-
-<div class="columns">
-<div>
-
-<iframe width="90%" height="100%" src="https://www.youtube.com/embed/UB1O30fR-EE?si=lyvgGgHAOZLf4YNq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-<div>
-
-## HTML Crash Course For Absolute Beginners
-
-By Traversy Media.
-
-A comprehensive introduction to HTML, covering essential concepts and practical steps to create a basic web page.
-</div>
-</div>
-
 
 
 ---
