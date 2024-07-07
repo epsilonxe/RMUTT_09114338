@@ -43,7 +43,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
 <table>
   <thead>
     <tr>
-      <th>#</th>
+      <th>Number</th>
       <th>Topic</th>
       <th>Lecture</th>
       <th>Workshop</th>
@@ -54,199 +54,260 @@ Concepts of computer networks and internet, use of web technologies for modern w
       <td>1</td>
       <td>Introduction to Modern Web Development</td>
       <td>
-        Overview of Web Development (Frontend, Backend, Full-stack)<br>
-        Introduction to Web Technologies (HTML, CSS, JavaScript)<br>
-        Setting Up Development Environment
+        <ul>
+          <li>Overview of Web Development (Frontend, Backend, Full-stack)</li>
+          <li>Introduction to Web Technologies (HTML, CSS, JavaScript)</li>
+          <li>Setting Up Development Environment</li>
+        </ul>
       </td>
       <td>
-        Installing and Configuring Development Tools (VSCode, Node.js, Git)<br>
-        Basic HTML and CSS Structure<br>
-        Creating a Simple Web Page
+        <ul>
+          <li>Installing and Configuring Development Tools (VSCode, Node.js, Git)</li>
+          <li>Basic HTML and CSS Structure</li>
+          <li>Creating a Simple Web Page</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>2</td>
       <td>HTML Fundamentals</td>
       <td>
-        HTML Elements and Attributes<br>
-        Semantic HTML<br>
-        Forms and Input Types
+        <ul>
+          <li>HTML Elements and Attributes</li>
+          <li>Semantic HTML</li>
+          <li>Forms and Input Types</li>
+        </ul>
       </td>
       <td>
-        Building a Multi-page Website<br>
-        Form Creation and Validation
+        <ul>
+          <li>Building a Multi-page Website</li>
+          <li>Form Creation and Validation</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>3</td>
       <td>CSS Fundamentals</td>
       <td>
-        CSS Syntax and Selectors<br>
-        Box Model and Layout Techniques<br>
-        Responsive Design with Media Queries
+        <ul>
+          <li>CSS Syntax and Selectors</li>
+          <li>Box Model and Layout Techniques</li>
+          <li>Responsive Design with Media Queries</li>
+        </ul>
       </td>
       <td>
-        Styling Web Pages<br>
-        Implementing Responsive Designs
+        <ul>
+          <li>Styling Web Pages</li>
+          <li>Implementing Responsive Designs</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>4</td>
       <td>Introduction to JavaScript</td>
       <td>
-        JavaScript Basics (Variables, Data Types, Operators)<br>
-        Control Structures (Loops, Conditionals)<br>
-        Functions and Scope
+        <ul>
+          <li>JavaScript Basics (Variables, Data Types, Operators)</li>
+          <li>Control Structures (Loops, Conditionals)</li>
+          <li>Functions and Scope</li>
+        </ul>
       </td>
       <td>
-        Writing Basic JavaScript Programs<br>
-        Adding Interactivity to Web Pages
+        <ul>
+          <li>Writing Basic JavaScript Programs</li>
+          <li>Adding Interactivity to Web Pages</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>5</td>
       <td>Advanced JavaScript</td>
       <td>
-        DOM Manipulation<br>
-        Event Handling<br>
-        Fetch API and AJAX
+        <ul>
+          <li>DOM Manipulation</li>
+          <li>Event Handling</li>
+          <li>Fetch API and AJAX</li>
+        </ul>
       </td>
       <td>
-        Dynamic Content Update<br>
-        Building a Simple To-Do List Application
+        <ul>
+          <li>Dynamic Content Update</li>
+          <li>Building a Simple To-Do List Application</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>6</td>
       <td>Version Control with Git</td>
       <td>
-        Introduction to Git and GitHub<br>
-        Basic Git Commands<br>
-        Branching and Merging
+        <ul>
+          <li>Introduction to Git and GitHub</li>
+          <li>Basic Git Commands</li>
+          <li>Branching and Merging</li>
+        </ul>
       </td>
       <td>
-        Setting Up a Git Repository<br>
-        Collaborative Workflow with GitHub
+        <ul>
+          <li>Setting Up a Git Repository</li>
+          <li>Collaborative Workflow with GitHub</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>7</td>
       <td>Introduction to Backend Development</td>
       <td>
-        Overview of Backend Technologies<br>
-        Introduction to Node.js and Express.js<br>
-        RESTful API Design
+        <ul>
+          <li>Overview of Backend Technologies</li>
+          <li>Introduction to Node.js and Express.js</li>
+          <li>RESTful API Design</li>
+        </ul>
       </td>
       <td>
-        Setting Up a Node.js Project<br>
-        Building a Simple RESTful API
+        <ul>
+          <li>Setting Up a Node.js Project</li>
+          <li>Building a Simple RESTful API</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>8</td>
       <td>Database Integration</td>
       <td>
-        Introduction to Databases (SQL vs NoSQL)<br>
-        Working with MongoDB<br>
-        Mongoose for MongoDB Integration
+        <ul>
+          <li>Introduction to Databases (SQL vs NoSQL)</li>
+          <li>Working with MongoDB</li>
+          <li>Mongoose for MongoDB Integration</li>
+        </ul>
       </td>
       <td>
-        Setting Up MongoDB<br>
-        CRUD Operations with Mongoose
+        <ul>
+          <li>Setting Up MongoDB</li>
+          <li>CRUD Operations with Mongoose</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>9</td>
       <td>Authentication and Authorization</td>
       <td>
-        User Authentication Concepts<br>
-        JWT (JSON Web Tokens)<br>
-        Role-Based Access Control
+        <ul>
+          <li>User Authentication Concepts</li>
+          <li>JWT (JSON Web Tokens)</li>
+          <li>Role-Based Access Control</li>
+        </ul>
       </td>
       <td>
-        Implementing User Authentication in Node.js<br>
-        Protecting Routes with JWT
+        <ul>
+          <li>Implementing User Authentication in Node.js</li>
+          <li>Protecting Routes with JWT</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>10</td>
       <td>Frontend Frameworks - React.js</td>
       <td>
-        Introduction to React.js<br>
-        Components and Props<br>
-        State Management
+        <ul>
+          <li>Introduction to React.js</li>
+          <li>Components and Props</li>
+          <li>State Management</li>
+        </ul>
       </td>
       <td>
-        Setting Up a React Project<br>
-        Building a Simple React Application
+        <ul>
+          <li>Setting Up a React Project</li>
+          <li>Building a Simple React Application</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>11</td>
       <td>Advanced React.js</td>
       <td>
-        Lifecycle Methods and Hooks<br>
-        Routing with React Router<br>
-        State Management with Redux
+        <ul>
+          <li>Lifecycle Methods and Hooks</li>
+          <li>Routing with React Router</li>
+          <li>State Management with Redux</li>
+        </ul>
       </td>
       <td>
-        Implementing Routing in a React Application<br>
-        Managing State with Redux
+        <ul>
+          <li>Implementing Routing in a React Application</li>
+          <li>Managing State with Redux</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>12</td>
       <td>Building Full-stack Applications</td>
       <td>
-        Connecting Frontend and Backend<br>
-        API Integration<br>
-        Deployment Overview
+        <ul>
+          <li>Connecting Frontend and Backend</li>
+          <li>API Integration</li>
+          <li>Deployment Overview</li>
+        </ul>
       </td>
       <td>
-        Building a Full-stack Application<br>
-        Integrating React with Node.js API
+        <ul>
+          <li>Building a Full-stack Application</li>
+          <li>Integrating React with Node.js API</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>13</td>
       <td>Testing and Debugging</td>
       <td>
-        Introduction to Testing (Unit, Integration, End-to-End)<br>
-        Debugging Techniques<br>
-        Testing Tools (Jest, Mocha, Chai)
+        <ul>
+          <li>Introduction to Testing (Unit, Integration, End-to-End)</li>
+          <li>Debugging Techniques</li>
+          <li>Testing Tools (Jest, Mocha, Chai)</li>
+        </ul>
       </td>
       <td>
-        Writing Unit and Integration Tests<br>
-        Debugging a Full-stack Application
+        <ul>
+          <li>Writing Unit and Integration Tests</li>
+          <li>Debugging a Full-stack Application</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>14</td>
       <td>Performance Optimization</td>
       <td>
-        Web Performance Best Practices<br>
-        Optimizing Frontend Performance<br>
-        Caching Strategies
+        <ul>
+          <li>Web Performance Best Practices</li>
+          <li>Optimizing Frontend Performance</li>
+          <li>Caching Strategies</li>
+        </ul>
       </td>
       <td>
-        Analyzing and Improving Performance<br>
-        Implementing Caching Mechanisms
+        <ul>
+          <li>Analyzing and Improving Performance</li>
+          <li>Implementing Caching Mechanisms</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>15</td>
       <td>Deployment and DevOps</td>
       <td>
-        Introduction to DevOps<br>
-        Continuous Integration/Continuous Deployment (CI/CD)<br>
-        Cloud Platforms (Heroku, AWS)
+        <ul>
+          <li>Introduction to DevOps</li>
+          <li>Continuous Integration/Continuous Deployment (CI/CD)</li>
+          <li>Cloud Platforms (Heroku, AWS)</li>
+        </ul>
       </td>
       <td>
-        Setting Up a CI/CD Pipeline<br>
-        Deploying a Full-stack Application to the Cloud
+        <ul>
+          <li>Setting Up a CI/CD Pipeline</li>
+          <li>Deploying a Full-stack Application to the Cloud</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
 
 ## References
