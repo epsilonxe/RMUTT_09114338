@@ -1,6 +1,10 @@
 # RMUTT_09114338
 Official repository of RMUTT 09114338: Modern Website Development
 
+
+![banner](slides/figures/banner.webp)
+
+
 ## Semester 1/67
 Lecturer: Ratthaprom Promkam, Dr. rer. nat.
 
