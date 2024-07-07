@@ -52,7 +52,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
   <tbody>
     <tr>
       <td>1</td>
-      <td><a href="slides/introduction.html">Introduction to Modern Web Development</a></td>
+      <td><a href="slides/introduction.html" target="_blank">Introduction to Modern Web Development</a></td>
       <td>
         <ul>
           <li>Overview of Web Development (Frontend, Backend, Full-stack)</li>
@@ -70,7 +70,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>2</td>
-      <td><a href="slides/html.html">HTML Fundamentals</a></td>
+      <td><a href="slides/html.html" target="_blank">HTML Fundamentals</a></td>
       <td>
         <ul>
           <li>HTML Elements and Attributes</li>
@@ -87,7 +87,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>3</td>
-      <td><a href="slides/css.html">CSS Fundamentals</a></td>
+      <td><a href="slides/css.html" target="_blank">CSS Fundamentals</a></td>
       <td>
         <ul>
           <li>CSS Syntax and Selectors</li>
@@ -104,7 +104,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>4</td>
-      <td><a href="slides/js1.html">Introduction to JavaScript</a></td>
+      <td><a href="slides/js1.html" target="_blank">Introduction to JavaScript</a></td>
       <td>
         <ul>
           <li>JavaScript Basics (Variables, Data Types, Operators)</li>
@@ -121,7 +121,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>5</td>
-      <td><a href="slides/js2.html">Advanced JavaScript</a></td>
+      <td><a href="slides/js2.html" target="_blank">Advanced JavaScript</a></td>
       <td>
         <ul>
           <li>DOM Manipulation</li>
@@ -138,7 +138,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>6</td>
-      <td>Version Control with Git</td>
+      <td><a href="slides/git.html" target="_blank">Version Control with Git</a></td>
       <td>
         <ul>
           <li>Introduction to Git and GitHub</li>
@@ -155,7 +155,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>7</td>
-      <td>Introduction to Backend Development</td>
+      <td><a href="node.html" target="_blank">Introduction to Backend Development</a></td>
       <td>
         <ul>
           <li>Overview of Backend Technologies</li>
@@ -172,7 +172,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>8</td>
-      <td>Database Integration</td>
+      <td><a href="db.html" target="_blank">Database Integration</a></td>
       <td>
         <ul>
           <li>Introduction to Databases (SQL vs NoSQL)</li>
