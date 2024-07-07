@@ -26,7 +26,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
 
 |Section| Day  |  Lecture  | Workshop | MS-Teams Code |
 |--------|-------|----------|----------|---------------|
-| 1     | MON    | ST1905 08.00-10.00 | ST1905 10.00-12.00 | `sq9hwhk` |
+| 1     | MON    | ST1905 <br> 08.00-10.00 | ST1905 <br>10.00-12.00 | `sq9hwhk` |
 
 
 ## Examinations
@@ -39,18 +39,9 @@ Concepts of computer networks and internet, use of web technologies for modern w
 
 ## Course Outline
 
-| Topic  |  Lecture           |  Workshop  |
-|--------|--------------------|------------|
-| Introduction to Modern Web Development 
-|
-  - Overview of Web Development (Frontend, Backend, Full-stack)
-  - Introduction to Web Technologies (HTML, CSS, JavaScript)
-  - Setting Up Development Environment 
-|
-  - Installing and Configuring Development Tools (VSCode, Node.js, Git)
-  - Basic HTML and CSS Structure
-  - Creating a Simple Web Page 
-|
+|    | Topic  |  Lecture           |  Workshop  |
+|----|--------|--------------------|------------|
+| 1  | Introduction to Modern Web Development | Overview of Web Development (Frontend, Backend, Full-stack), Introduction to Web Technologies (HTML, CSS, JavaScript), Setting Up Development Environment | Installing and Configuring Development Tools (VSCode, Node.js, Git), Basic HTML and CSS Structure, Creating a Simple Web Page |
 
 
   
