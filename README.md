@@ -39,137 +39,214 @@ Concepts of computer networks and internet, use of web technologies for modern w
 
 ## Course Outline
 
-|    | Topic  |  Lecture           |  Workshop  |
-|----|--------|--------------------|------------|
-| 1  | Introduction to Modern Web Development | Overview of Web Development (Frontend, Backend, Full-stack), Introduction to Web Technologies (HTML, CSS, JavaScript), Setting Up Development Environment | Installing and Configuring Development Tools (VSCode, Node.js, Git), Basic HTML and CSS Structure, Creating a Simple Web Page |
 
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Topic</th>
+      <th>Lecture</th>
+      <th>Workshop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Introduction to Modern Web Development</td>
+      <td>
+        Overview of Web Development (Frontend, Backend, Full-stack)<br>
+        Introduction to Web Technologies (HTML, CSS, JavaScript)<br>
+        Setting Up Development Environment
+      </td>
+      <td>
+        Installing and Configuring Development Tools (VSCode, Node.js, Git)<br>
+        Basic HTML and CSS Structure<br>
+        Creating a Simple Web Page
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>HTML Fundamentals</td>
+      <td>
+        HTML Elements and Attributes<br>
+        Semantic HTML<br>
+        Forms and Input Types
+      </td>
+      <td>
+        Building a Multi-page Website<br>
+        Form Creation and Validation
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>CSS Fundamentals</td>
+      <td>
+        CSS Syntax and Selectors<br>
+        Box Model and Layout Techniques<br>
+        Responsive Design with Media Queries
+      </td>
+      <td>
+        Styling Web Pages<br>
+        Implementing Responsive Designs
+      </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Introduction to JavaScript</td>
+      <td>
+        JavaScript Basics (Variables, Data Types, Operators)<br>
+        Control Structures (Loops, Conditionals)<br>
+        Functions and Scope
+      </td>
+      <td>
+        Writing Basic JavaScript Programs<br>
+        Adding Interactivity to Web Pages
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Advanced JavaScript</td>
+      <td>
+        DOM Manipulation<br>
+        Event Handling<br>
+        Fetch API and AJAX
+      </td>
+      <td>
+        Dynamic Content Update<br>
+        Building a Simple To-Do List Application
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Version Control with Git</td>
+      <td>
+        Introduction to Git and GitHub<br>
+        Basic Git Commands<br>
+        Branching and Merging
+      </td>
+      <td>
+        Setting Up a Git Repository<br>
+        Collaborative Workflow with GitHub
+      </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Introduction to Backend Development</td>
+      <td>
+        Overview of Backend Technologies<br>
+        Introduction to Node.js and Express.js<br>
+        RESTful API Design
+      </td>
+      <td>
+        Setting Up a Node.js Project<br>
+        Building a Simple RESTful API
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Database Integration</td>
+      <td>
+        Introduction to Databases (SQL vs NoSQL)<br>
+        Working with MongoDB<br>
+        Mongoose for MongoDB Integration
+      </td>
+      <td>
+        Setting Up MongoDB<br>
+        CRUD Operations with Mongoose
+      </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Authentication and Authorization</td>
+      <td>
+        User Authentication Concepts<br>
+        JWT (JSON Web Tokens)<br>
+        Role-Based Access Control
+      </td>
+      <td>
+        Implementing User Authentication in Node.js<br>
+        Protecting Routes with JWT
+      </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Frontend Frameworks - React.js</td>
+      <td>
+        Introduction to React.js<br>
+        Components and Props<br>
+        State Management
+      </td>
+      <td>
+        Setting Up a React Project<br>
+        Building a Simple React Application
+      </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Advanced React.js</td>
+      <td>
+        Lifecycle Methods and Hooks<br>
+        Routing with React Router<br>
+        State Management with Redux
+      </td>
+      <td>
+        Implementing Routing in a React Application<br>
+        Managing State with Redux
+      </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Building Full-stack Applications</td>
+      <td>
+        Connecting Frontend and Backend<br>
+        API Integration<br>
+        Deployment Overview
+      </td>
+      <td>
+        Building a Full-stack Application<br>
+        Integrating React with Node.js API
+      </td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Testing and Debugging</td>
+      <td>
+        Introduction to Testing (Unit, Integration, End-to-End)<br>
+        Debugging Techniques<br>
+        Testing Tools (Jest, Mocha, Chai)
+      </td>
+      <td>
+        Writing Unit and Integration Tests<br>
+        Debugging a Full-stack Application
+      </td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Performance Optimization</td>
+      <td>
+        Web Performance Best Practices<br>
+        Optimizing Frontend Performance<br>
+        Caching Strategies
+      </td>
+      <td>
+        Analyzing and Improving Performance<br>
+        Implementing Caching Mechanisms
+      </td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Deployment and DevOps</td>
+      <td>
+        Introduction to DevOps<br>
+        Continuous Integration/Continuous Deployment (CI/CD)<br>
+        Cloud Platforms (Heroku, AWS)
+      </td>
+      <td>
+        Setting Up a CI/CD Pipeline<br>
+        Deploying a Full-stack Application to the Cloud
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-  
-
-### HTML Fundamentals
-- **Lecture:**
-  - HTML Elements and Attributes
-  - Semantic HTML
-  - Forms and Input Types
-- **Workshop:**
-  - Building a Multi-page Website
-  - Form Creation and Validation
-
-### CSS Fundamentals
-- **Lecture:**
-  - CSS Syntax and Selectors
-  - Box Model and Layout Techniques
-  - Responsive Design with Media Queries
-- **Workshop:**
-  - Styling Web Pages
-  - Implementing Responsive Designs
-
-#### Week 4: Introduction to JavaScript
-- **Lecture:**
-  - JavaScript Basics (Variables, Data Types, Operators)
-  - Control Structures (Loops, Conditionals)
-  - Functions and Scope
-- **Workshop:**
-  - Writing Basic JavaScript Programs
-  - Adding Interactivity to Web Pages
-
-#### Week 5: Advanced JavaScript
-- **Lecture:**
-  - DOM Manipulation
-  - Event Handling
-  - Fetch API and AJAX
-- **Workshop:**
-  - Dynamic Content Update
-  - Building a Simple To-Do List Application
-
-#### Week 6: Version Control with Git
-- **Lecture:**
-  - Introduction to Git and GitHub
-  - Basic Git Commands
-  - Branching and Merging
-- **Workshop:**
-  - Setting Up a Git Repository
-  - Collaborative Workflow with GitHub
-
-#### Week 7: Introduction to Backend Development
-- **Lecture:**
-  - Overview of Backend Technologies
-  - Introduction to Node.js and Express.js
-  - RESTful API Design
-- **Workshop:**
-  - Setting Up a Node.js Project
-  - Building a Simple RESTful API
-
-#### Week 8: Database Integration
-- **Lecture:**
-  - Introduction to Databases (SQL vs NoSQL)
-  - Working with MongoDB
-  - Mongoose for MongoDB Integration
-- **Workshop:**
-  - Setting Up MongoDB
-  - CRUD Operations with Mongoose
-
-#### Week 9: Authentication and Authorization
-- **Lecture:**
-  - User Authentication Concepts
-  - JWT (JSON Web Tokens)
-  - Role-Based Access Control
-- **Workshop:**
-  - Implementing User Authentication in Node.js
-  - Protecting Routes with JWT
-
-#### Week 10: Frontend Frameworks - React.js
-- **Lecture:**
-  - Introduction to React.js
-  - Components and Props
-  - State Management
-- **Workshop:**
-  - Setting Up a React Project
-  - Building a Simple React Application
-
-#### Week 11: Advanced React.js
-- **Lecture:**
-  - Lifecycle Methods and Hooks
-  - Routing with React Router
-  - State Management with Redux
-- **Workshop:**
-  - Implementing Routing in a React Application
-  - Managing State with Redux
-
-#### Week 12: Building Full-stack Applications
-- **Lecture:**
-  - Connecting Frontend and Backend
-  - API Integration
-  - Deployment Overview
-- **Workshop:**
-  - Building a Full-stack Application
-  - Integrating React with Node.js API
-
-#### Week 13: Testing and Debugging
-- **Lecture:**
-  - Introduction to Testing (Unit, Integration, End-to-End)
-  - Debugging Techniques
-  - Testing Tools (Jest, Mocha, Chai)
-- **Workshop:**
-  - Writing Unit and Integration Tests
-  - Debugging a Full-stack Application
-
-#### Week 14: Performance Optimization
-- **Lecture:**
-  - Web Performance Best Practices
-  - Optimizing Frontend Performance
-  - Caching Strategies
-- **Workshop:**
-  - Analyzing and Improving Performance
-  - Implementing Caching Mechanisms
-
-#### Week 15: Deployment and DevOps
-- **Lecture:**
-  - Introduction to DevOps
-  - Continuous Integration/Continuous Deployment (CI/CD)
-  - Cloud Platforms (Heroku, AWS)
-- **Workshop:**
-  - Setting Up a CI/CD Pipeline
-  - Deploying a Full-stack Application to the Cloud
-
-This course outline provides a comprehensive overview of modern web development, balancing theoretical knowledge with practical workshops to reinforce learning.
+## References
