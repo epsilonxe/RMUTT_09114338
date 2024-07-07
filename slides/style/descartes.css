@@ -93,6 +93,10 @@ section.transition2 strong {
 
 }
 
+img {
+  background-color: transparent!important;
+}
+
 img[alt~="center"] {
   display: block;
   margin: 0 auto;

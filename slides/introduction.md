@@ -1,5 +1,5 @@
 ---
-title       : Modern Website Development
+title       : Introduction to Modern Web Development
 marp        : true
 paginate    : true
 theme       : descartes
@@ -10,8 +10,8 @@ theme       : descartes
 ![bg left:33%](figures/cover_w01.webp)
 
 <div class="title">Introduction to Modern Web Development</div>
-<div class="subtitle">Modern Website Development (Week 1)</div>
-<div class="author">R. Promkam and W.Kuangsatung</div>
+<div class="subtitle">Modern Website Development</div>
+<div class="author">R. Promkam, Dr.rer.nat.</div>
 <div class="organization">Department of Mathematics and Computer Science, RMUTT</div>
 
 
@@ -21,7 +21,7 @@ theme       : descartes
 
 # Agenda
 
-1. *The Internet*
+1. *The Internet & Websites*
 1. *Overview of Web Development*
 1. *Introduction to Web Technologies*
 1. *Setting Up Development Environment*
@@ -131,7 +131,7 @@ Provide resources and services (websites, data storage).
 
 # Internet Service Providers (ISPs)
 
-![bg left:40% fit](figures/thai_isp.png)
+![bg left:40% contain](figures/thai_isp.png)
 
 - Companies that provide internet access to users.
 - Examples: 3BB, True Internet, AIS Fibre, etc.
@@ -165,34 +165,35 @@ Provide resources and services (websites, data storage).
 
 # Introduction to Web Technologies
 
+<div class="columns">
+<div>
+
 ## HTML (HyperText Markup Language)
+
 - Structure of web pages.
-- Defines elements such as headings, paragraphs, links, and images.  
+- Defines elements such as headings, paragraphs, links, and images. 
 
 ## CSS (Cascading Style Sheets)
 - Styling of web pages.
-- Manages layout, colors, fonts, and responsiveness. 
+- Manages layout, colors, fonts, and responsiveness.
+</div>
+<div>
 
-## JavaScript
+## JS (JavaScript)
 - Adds interactivity to web pages.
 - Handles events, animations, and API calls. 
 
----
+![center h:300px](figures/html_css_js_2.png)     
 
-# Setting Up Development Environment
+</div>
+</div>
 
-## VSCode
-- Code editor
-- Installation process: [Download](https://code.visualstudio.com/)
 
-## Node.js
-- JavaScript runtime
-- Installation process: [Download](https://nodejs.org/)
-## Git
-- Version control system
-- Installation process: [Download](https://git-scm.com/) 
+
+
 
 ---
+ 
 
 <!-- 
 _class: cool-list 
@@ -215,17 +216,25 @@ _class: cool-list
 <div class="columns">
 <div>
 
-## Visual Studio Code (VSCode)
-- Open [code.visualstudio.com](https://code.visualstudio.com/)
+## Text Editors
+
+![h:120px](figures/st4.png) ![h:120px](figures/vscode.png)
+
+- Sublime Text
+    - Open [sublimetext.com](https://www.sublimetext.com/download)
+- Visual Studio Code (VSCode)
+    - Open [code.visualstudio.com](https://code.visualstudio.com/)
 - Download and install for your operating system.
 </div>
 <div>
     
 ## Node.js
+- JavaScript runtime.
 - Open [nodejs.org](https://nodejs.org/)
 - Download the LTS version and install.
 
 ## Git
+- Version control system.
 - Open [git-scm.com](https://git-scm.com/)
 - Download and install for your operating system.
 </div>

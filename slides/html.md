@@ -1,5 +1,5 @@
 ---
-title       : Modern Website Development
+title       : HTML Fundamentals
 marp        : true
 paginate    : true
 theme       : descartes
@@ -10,8 +10,8 @@ theme       : descartes
 ![bg left:33%](figures/cover_w02.webp)
 
 <div class="title">HTML Fundamentals</div>
-<div class="subtitle">Modern Website Development (Week 2)</div>
-<div class="author">R. Promkam and W.Kuangsatung</div>
+<div class="subtitle">Modern Website Development</div>
+<div class="author">R. Promkam, Dr.rer.nat.</div>
 <div class="organization">Department of Mathematics and Computer Science, RMUTT</div>
 
 

@@ -1,6 +1,8 @@
 # RMUTT_09114338
-Official repository of RMUTT 09114338: Mod่ern Website Development
+Official repository of RMUTT 09114338: Modern Website Development
 
+## Semester 1/67
+Lecturer: Ratthaprom Promkam, Dr. rer. nat.
 
 ## Course Learning Outcomes
 
@@ -12,21 +14,48 @@ Official repository of RMUTT 09114338: Mod่ern Website Development
 6. สร้างเวบไซต์ที่มีการเชื่อมต่อกับฐานข้อมูลเอสคิว แอลหรือนอนเอสคิวแอลได้
 7. ใช้ความรู้ทางคณิตศาสตร์นําเสนอข้อมูลได้
 
-## Draft
 
-### Modern Website Development Course Outline
+## Course Description
 
-#### Week 1: Introduction to Modern Web Development
-- **Lecture:**
+แนวคิดของเครือข่ายคอมพิวเตอร์และอินเทอร์เน็ต การพัฒนาเว็บไซต์สมัยใหม่โดยใช้เว็บเทคโนโลยี เอชทีเอ็มแอล ซีเอสเอส จาวาสคริปต์ เอกซ์เอ็มแอล เอแจกซ์ การออกแบบหน้าเวบแบบเรสปอนซีฟ การใช้เว็บเฟรมเวิร์คที่เป็นที่นิยม การเชื่อมต่อกับฐานข้อมูลเอสคิวแอลและนอนเอสคิวแอล และปฏิบัติการที่เกี่ยวข้อง
+
+Concepts of computer networks and internet, use of web technologies for modern website development, HTML, CSS, JavaScript, XML, AJAX, responsive web design, popular web frameworks, connecting to SQL and NoSQL databases and related laboratories
+
+
+## Classrooms
+
+|Section| Day  |  Lecture  | Workshop | MS-Teams Code |
+|--------|-------|----------|----------|---------------|
+| 1     | MON    | ST1905 08.00-10.00 | ST1905 10.00-12.00 | `sq9hwhk` |
+
+
+## Examinations
+
+| Exam  | Date/Time  | Location |
+|-------|-------------|----------|
+| Mid-term | 26 AUG 2024 09.00-12.00 | TBA |
+| Final    | 21 OCT 2024 09.00-12.00 | TBA |
+
+
+## Course Outline
+
+| Topic  |  Lecture           |  Workshop  |
+|--------|--------------------|------------|
+| Introduction to Modern Web Development 
+|
   - Overview of Web Development (Frontend, Backend, Full-stack)
   - Introduction to Web Technologies (HTML, CSS, JavaScript)
-  - Setting Up Development Environment
-- **Workshop:**
+  - Setting Up Development Environment 
+|
   - Installing and Configuring Development Tools (VSCode, Node.js, Git)
   - Basic HTML and CSS Structure
-  - Creating a Simple Web Page
+  - Creating a Simple Web Page 
+|
 
-#### Week 2: HTML Fundamentals
+
+  
+
+### HTML Fundamentals
 - **Lecture:**
   - HTML Elements and Attributes
   - Semantic HTML
@@ -35,7 +64,7 @@ Official repository of RMUTT 09114338: Mod่ern Website Development
   - Building a Multi-page Website
   - Form Creation and Validation
 
-#### Week 3: CSS Fundamentals
+### CSS Fundamentals
 - **Lecture:**
   - CSS Syntax and Selectors
   - Box Model and Layout Techniques
