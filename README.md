@@ -4,6 +4,12 @@ Official repository of RMUTT 09114338: Modern Website Development
 ## Semester 1/67
 Lecturer: Ratthaprom Promkam, Dr. rer. nat.
 
+## Course Description
+
+แนวคิดของเครือข่ายคอมพิวเตอร์และอินเทอร์เน็ต การพัฒนาเว็บไซต์สมัยใหม่โดยใช้เว็บเทคโนโลยี เอชทีเอ็มแอล ซีเอสเอส จาวาสคริปต์ เอกซ์เอ็มแอล เอแจกซ์ การออกแบบหน้าเวบแบบเรสปอนซีฟ การใช้เว็บเฟรมเวิร์คที่เป็นที่นิยม การเชื่อมต่อกับฐานข้อมูลเอสคิวแอลและนอนเอสคิวแอล และปฏิบัติการที่เกี่ยวข้อง
+
+Concepts of computer networks and internet, use of web technologies for modern website development, HTML, CSS, JavaScript, XML, AJAX, responsive web design, popular web frameworks, connecting to SQL and NoSQL databases and related laboratories
+
 ## Course Learning Outcomes
 
 1. ปฏิบัติตามกฎ ระเบียบ ข้อบังคับ และข้อตกลง ของชั้นเรียนได้
@@ -15,18 +21,11 @@ Lecturer: Ratthaprom Promkam, Dr. rer. nat.
 7. ใช้ความรู้ทางคณิตศาสตร์นําเสนอข้อมูลได้
 
 
-## Course Description
-
-แนวคิดของเครือข่ายคอมพิวเตอร์และอินเทอร์เน็ต การพัฒนาเว็บไซต์สมัยใหม่โดยใช้เว็บเทคโนโลยี เอชทีเอ็มแอล ซีเอสเอส จาวาสคริปต์ เอกซ์เอ็มแอล เอแจกซ์ การออกแบบหน้าเวบแบบเรสปอนซีฟ การใช้เว็บเฟรมเวิร์คที่เป็นที่นิยม การเชื่อมต่อกับฐานข้อมูลเอสคิวแอลและนอนเอสคิวแอล และปฏิบัติการที่เกี่ยวข้อง
-
-Concepts of computer networks and internet, use of web technologies for modern website development, HTML, CSS, JavaScript, XML, AJAX, responsive web design, popular web frameworks, connecting to SQL and NoSQL databases and related laboratories
-
-
 ## Classrooms
 
 |Section| Day  |  Lecture  | Workshop | MS-Teams Code |
 |--------|-------|----------|----------|---------------|
-| 1     | MON    | ST1905 <br> 08.00-10.00 | ST1905 <br>10.00-12.00 | `sq9hwhk` |
+| 1     | MON    | ST1905 <br/> 08.00-10.00 | ST1905 <br/>10.00-12.00 | `sq9hwhk` |
 
 
 ## Examinations
@@ -43,7 +42,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
 <table>
   <thead>
     <tr>
-      <th>Number</th>
+      <th>#</th>
       <th>Topic</th>
       <th>Lecture</th>
       <th>Workshop</th>
@@ -311,3 +310,8 @@ Concepts of computer networks and internet, use of web technologies for modern w
 
 
 ## References
+
+- J. Duckett, HTML and CSS: Design and Build Websites, First Edition. John Wiley & Sons, 2011.
+- D. Flanagan, JavaScript: The Definitive Guide, 7th edition. O’Reilly Media, 2020.
+- M. Haverbeke, Eloquent JavaScript: A Modern Introduction to Programming, 3rd edition. No Starch Press, 2018.
+- N. Morgan, JavaScript Crash Course. No Starch Press, 2024.
