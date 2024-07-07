@@ -1,9 +1,6 @@
-# RMUTT_09114338
-Official repository of RMUTT 09114338: Modern Website Development
-
+# Modern Website Development
 
 ![banner](slides/figures/banner.webp)
-
 
 ## Semester 1/67
 Lecturer: Ratthaprom Promkam, Dr. rer. nat.
@@ -18,7 +15,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
 
 1. ปฏิบัติตามกฎ ระเบียบ ข้อบังคับ และข้อตกลง ของชั้นเรียนได้
 2. อธิบายการทํางานของเครือข่ายคอมพิวเตอร์และ อินเทอร์เน็ตได้
-3. สร้างเวบไซต์โดยใช้เว็บเทคโนโลยี เอชทีเอ็มแอล ซี เอสเอส และจาวาสคริปต์ได้
+3. สร้างเวบไซต์โดยใช้เว็บเทคโนโลยี เอชทีเอ็มแอล ซีเอสเอส และจาวาสคริปต์ได้
 4. ใช้เวบเฟรมเวิร์คที่เป็นที่นิยมในปัจจุบัน อาทิ Bootstrap, Tailwind CSS, Materialize หรือ Foundation by Zurb เป็นต้น ในการออกแบบหน้าเวบแบบเรสปอนซีฟได้
 5. บอกความแตกต่างระหว่างฐานข้อมูลเอสคิวแอล และนอนเอสคิวแอลได้
 6. สร้างเวบไซต์ที่มีการเชื่อมต่อกับฐานข้อมูลเอสคิว แอลหรือนอนเอสคิวแอลได้
@@ -34,10 +31,10 @@ Concepts of computer networks and internet, use of web technologies for modern w
 
 ## Examinations
 
-| Exam  | Date/Time  | Location |
+| การสอบ  | วันที่/เวลา | ห้องสอบ |
 |-------|-------------|----------|
-| Mid-term | 26 AUG 2024 09.00-12.00 | TBA |
-| Final    | 21 OCT 2024 09.00-12.00 | TBA |
+| กลางภาค | 26 สิงหาคม 2567 09.00-12.00 | TBA |
+| ปลายภาค    | 21 ตุลาคม 2567 09.00-12.00 | TBA |
 
 
 ## Course Outline
@@ -55,7 +52,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
   <tbody>
     <tr>
       <td>1</td>
-      <td>Introduction to Modern Web Development</td>
+      <td><a href="introduction.html">Introduction to Modern Web Development</a></td>
       <td>
         <ul>
           <li>Overview of Web Development (Frontend, Backend, Full-stack)</li>
@@ -73,7 +70,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>2</td>
-      <td>HTML Fundamentals</td>
+      <td><a href="html.html">HTML Fundamentals</a></td>
       <td>
         <ul>
           <li>HTML Elements and Attributes</li>
@@ -90,7 +87,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>3</td>
-      <td>CSS Fundamentals</td>
+      <td><a href="css.html">CSS Fundamentals</a></td>
       <td>
         <ul>
           <li>CSS Syntax and Selectors</li>
@@ -107,7 +104,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>4</td>
-      <td>Introduction to JavaScript</td>
+      <td><a href="js1.html">Introduction to JavaScript</a></td>
       <td>
         <ul>
           <li>JavaScript Basics (Variables, Data Types, Operators)</li>
@@ -124,7 +121,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>5</td>
-      <td>Advanced JavaScript</td>
+      <td><a href="js2.html">Advanced JavaScript</a></td>
       <td>
         <ul>
           <li>DOM Manipulation</li>
