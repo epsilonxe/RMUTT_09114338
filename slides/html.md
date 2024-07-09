@@ -11,7 +11,7 @@ theme       : descartes
 
 <div class="title">HTML Fundamentals</div>
 <div class="subtitle">Modern Website Development</div>
-<div class="author">R. Promkam, Dr.rer.nat.</div>
+<div class="author">R. Promkam, Dr. rer. nat.</div>
 <div class="organization">Department of Mathematics and Computer Science, RMUTT</div>
 
 
@@ -91,6 +91,64 @@ Unordered
 
 ---
 
+## Tables
+
+<div class="columns">
+<div>
+    
+- A table consists of table cells inside rows and columns.
+    - Use a `<tr> ... </tr>` tag to start a table row. 
+    - Use a `<td> ... </td>` tag to make a table cell. 
+    - Use the `<th>` tag to make a table header cell.
+
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>BMW AG</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Mixue Corp</td>
+    <td>Wu Chang</td>
+    <td>China</td>
+  </tr>
+</table>
+
+</div>
+<div>
+
+```html
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>BMW AG</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Mixue Corp</td>
+    <td>Wu Chang</td>
+    <td>China</td>
+  </tr>
+</table>
+```
+</div>
+</div>
+
+
+
+---
+
 # HTML Elements Example
 
 ```html
@@ -113,7 +171,6 @@ Unordered
 </body>
 </html>
 ```
-
 ---
 
 # Semantic HTML
@@ -325,7 +382,6 @@ Unordered
 ```
 ---
 
-<!-- _class: cool-list -->
 
 # Best Practices
 1. *Use Semantic HTML*
@@ -339,13 +395,12 @@ Unordered
 
 ---
 
-<!-- _class: cool-list -->
 
 # Workshop Activities
 
-1. *Building a Multi-page Website*
+1. Building a Multi-page Website
 	- Create multiple HTML files linked together.
-1. *Form Creation and Validation*
+1. Form Creation and Validation
 	- Build a form with different input types.
 	- Implement basic form validation using HTML5 attributes.
 
@@ -370,8 +425,6 @@ Unordered
 # Q&A
 
 Feel free to ask any questions you have about the content covered today.
-
----
 
 ---
 
