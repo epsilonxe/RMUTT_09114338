@@ -11,7 +11,7 @@ theme       : descartes
 
 <div class="title">Advanced JavaScript</div>
 <div class="subtitle">Modern Website Development</div>
-<div class="author">R. Promkam, Dr.rer.nat.</div>
+<div class="author">R. Promkam, Dr. rer. nat.</div>
 <div class="organization">Department of Mathematics and Computer Science, RMUTT</div>
 
 

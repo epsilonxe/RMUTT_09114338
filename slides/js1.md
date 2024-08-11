@@ -3,6 +3,8 @@ title       : Introduction to JavaScript
 marp        : true
 paginate    : true
 theme       : descartes
+style: |
+    @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css'
 ---
 
 <!-- _class: titlepage -->
@@ -11,7 +13,7 @@ theme       : descartes
 
 <div class="title">Introduction to JavaScript</div>
 <div class="subtitle">Modern Website Development</div>
-<div class="author">R. Promkam, Dr.rer.nat.</div>
+<div class="author">R. Promkam, Dr. rer. nat.</div>
 <div class="organization">Department of Mathematics and Computer Science, RMUTT</div>
 
 
@@ -97,9 +99,10 @@ console.log("Hello, World!");
 <div>
     
 ## Non-primative Types
-- **Object**: Complex data structure
+
 - **Array**: Ordered list of values
 - **Fucntion**: Block of code designed to perform a task
+- **Object**: Complex data structure
 </div>
 </div>
 
@@ -121,6 +124,17 @@ let numbers = [1, 2, 3, 4, 5]; // Array
 ```
 
 ---
+
+# Comparison of Declation Types
+
+| Declaration Type |    Scope  | Declaration | Update  value  |   Re-declare |
+|------------------|:-----------:|:-------------|:---------------:|:-----------:|
+| `var` | global/function |  Without initialize |  <i class="fa-regular fa-check"></i> |  <i class="fa-regular fa-check"></i> |
+| `const` |  block  | Need initialize| <i class="fa-regular fa-xmark"></i> | <i class="fa-regular fa-xmark"></i>|
+| `let` | block |  Without initialize | <i class="fa-regular fa-check"></i>| <i class="fa-regular fa-xmark"></i>|
+
+---
+
 
 ## Declared using `var`
 - Function-scoped.
@@ -239,18 +253,19 @@ console.log(c); // Output: 3
 ```
 ---
 
+
+
 <div class="columns">
 <div>
 
 # Control Structures
-
 ## `if...else` Statements
 
 - Used to execute code based on a condition.
 </div>
 <div>
     
-### Example
+## Example
 
 ```javascript
 let age = 20;
@@ -265,10 +280,6 @@ if (age < 18) {
 ```
 </div>
 </div>
-
-
-
-
 
 ---
 
@@ -387,24 +398,40 @@ for (let fruit of fruits) {
 </div>
 </div>
 
-
 ---
-
-
 
 # Functions
 - Block of code designed to perform a task.
 - Defined using the `function` keyword.
 
-## Example
+## Examples
+
+<div class='columns'>
+<div>
 
 ```javascript
 function greet(name) {
-    console.log("Hello, " + name + "!");
+    words = 'Hello ' + name + '!'
+    console.log(words);
 }
 
-greet("Alice");
+greet('Alice'); // Hello Alice!
 ```
+</div>
+<div>
+    
+```javascript
+function cal(x, y) {
+    z = (x+y)*y/2;
+    return z;
+}
+
+console.log(cal(1, 100)); // 5050
+``` 
+</div>   
+</div>
+
+
 ---
 
 # Scope
@@ -422,10 +449,76 @@ function testScope() {
     console.log(localVar);
 }
 
-testScope();
+testScope(); //I am global /n I am local
 console.log(localVar); // Error: localVar is not defined
 ```
 
+---
+
+# Objects
+
+In real life, **objects** are things like: houses, cars, people, animals, or any other subjects.
+
+## Example
+
+<div class='columns'>
+<div>
+    <img src='./figures/beetle.png' width=80%>
+</div>
+<div>
+
+|  Propertie    |    Method  |
+|---------------|------------|
+| `car.name = 'Volkswagen'` | `car.start()` |
+| `car.model = 'Beetle'` | `car.drive()` |
+| `car.weight = 850` | `car.brake()` |
+| `car.color = 'red'` | `car.stop()` |
+
+</div>
+</div>
+
+---
+
+## Creating Objects
+
+```javascript
+let car = { 
+    name: 'Volkswagen',
+    model: 'Beetle',
+    weight: 850,
+    color: 'red',
+    start: function() {
+        let message = this.name + ' ' + this.model;
+        message += ' is ready!';
+        console.log(message);
+    }
+};
+```
+
+## Accessing Object Elements
+
+```javascript
+console.log(car.color) // red
+car.start(); // Volkswagen Beetle is ready
+```
+---
+
+
+## Modifying Objects
+
+```javascript
+car.weight = 945;   // Modify an existed value
+car.maxspeed = 185; // Add a new property
+
+// Modify a method
+car.start = function() { 
+    console.log('This car is ready to run!')
+}
+
+console.log(car.weight)     // Output: 945
+console.log(car.maxspeed)   // Output: 185
+car.start();                // Output: This car is ready to run!
+```
 ---
 
 # Event Handling
@@ -437,17 +530,21 @@ console.log(localVar); // Error: localVar is not defined
 
 ## Event Listeners
 - Functions that run when an event occurs.
+- See a list of events, [here](https://www.w3schools.com/jsref/dom_obj_event.asp).
 
 ### Example
 
 ```html
 <button id="myButton">Click me</button>
+```
+    
+```JavaScript
+function calling() {
+    alert('Button was clicked!');
+}
 
-<script>
-document.getElementById("myButton").addEventListener("click", function() {
-    alert("Button was clicked!");
-});
-</script>
+button = document.getElementById('myButton');
+button.addEventListener('click', calling);
 ```
 
 ---
@@ -478,13 +575,11 @@ document.getElementById("myButton").addEventListener("click", function() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic JavaScript</title>
+    <title>Workshop</title>
 </head>
 <body>
-    <h1>JavaScript Basics</h1>
-    <script>
-        console.log("Hello, World!");
-    </script>
+    <h1>Writing Basic JavaScript Programs</h1>
+    <script src="script.js"></script>
 </body>
 </html>
 ```
@@ -497,32 +592,29 @@ document.getElementById("myButton").addEventListener("click", function() {
 2. Declare variables of different data types and log them to the console.
 
 ```javascript
-let name = "Alice";
-const age = 30;
-var isStudent = true;
+let name = ...
+const age = ...
+var isStudent = ...
 
-console.log(name);
-console.log(age);
-console.log(isStudent);
 ```
 
 ---
 
 # Arrays and Iterations
 
-1. Create an array of days.
-1. Use different loops to iterate through the array and log each day to the console.
-
+1. Create an array of days and a variable for a number of days.
 ```javascript
 let days = ["Monday", "Tuesday", ..., "Sunday"];
+let n = days.length;
 ```
+2. Use different loops to iterate through days and log to the console.
 
 <div class="columns">
 <div>
     
 ```javascript
 let i = 0;
-while (i < days.length) {
+while (i < n) {
     console.log(days[i]);
     i++;
 }
@@ -531,15 +623,12 @@ while (i < days.length) {
 <div>
 
 ```javascript
-for (let i = 0; i < days.length; i++) {
+for (let i = 0; i < n; i++) {
     console.log(days[i]);
 }
-```
 
-```javascript
-
-for (let fruit of fruits) {
-    console.log(fruit);
+for (let d of days) {
+    console.log(d);
 }
 ```
 </div>
@@ -554,7 +643,7 @@ for (let fruit of fruits) {
 
 ```javascript
 function greet(name) {
-    console.log("Hello, " + name + "!");
+    console.log(...);
 }
 
 greet("Alice");
@@ -578,12 +667,6 @@ greet("Bob");
 </head>
 <body>
     <button id="myButton">Click me</button>
-
-    <script>
-        document.getElementById("myButton").addEventListener("click", function() {
-            alert("Button was clicked!");
-        });
-    </script>
 </body>
 </html>
 ```
