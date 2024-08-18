@@ -65,7 +65,8 @@ let firstItem = document.querySelector('.item');
     
 ## Changing Content
 - **innerHTML**: Changes the HTML content of an element.
-- **textContent**: Changes the text content of an element.
+- **innerText**: Like innerHTML but ignores HTML tags and hidded elements.
+- **textContent**: Like innerText but leaves styles even they are hidden.
 
 ## Changing Styles
 - **style.property**: Changes the CSS style of an element.
@@ -87,6 +88,111 @@ firstItem.style.fontSize = '20px';
 </div>
 
 ---
+
+<div class='columns'>
+<div>
+
+# Example: **innerHTML**
+```html
+<nav>
+  <a>Home</a>
+  <a>About</a>
+  <a>Contact</a>
+  <a style="display: none">Pricing</a>
+</nav>
+```
+```JavaScript
+// Reading content with innerHTML
+const navElement = document.querySelector('nav')
+```
+
+```JavaScript
+console.log(navElement.innerHTML)
+```
+</div>
+<div>
+
+## Output
+```Console
+<a>Home</a>
+<a>About</a>
+<a>Contact</a>
+‹a style="display: none">Pricing</a>
+```
+</div>
+</div>
+
+---
+
+
+<div class='columns'>
+<div>
+
+# Example: **innerText**
+```html
+<nav>
+  <a>Home</a>
+  <a>About</a>
+  <a>Contact</a>
+  <a style="display: none">Pricing</a>
+</nav>
+```
+```JavaScript
+// Reading content with innerHTML
+const navElement = document.querySelector('nav')
+```
+
+```JavaScript
+console.log(navElement.innerText)
+```
+</div>
+<div>
+
+## Output
+```Console
+Home About Contact
+```
+</div>
+</div>
+
+---
+
+
+<div class='columns'>
+<div>
+
+# Example: **textContent**
+```html
+<nav>
+  <a>Home</a>
+  <a>About</a>
+  <a>Contact</a>
+  <a style="display: none">Pricing</a>
+</nav>
+```
+```JavaScript
+// Reading content with innerHTML
+const navElement = document.querySelector('nav')
+```
+
+```JavaScript
+console.log(navElement.textContent)
+```
+</div>
+<div>
+
+## Output
+```Console
+Home
+About
+Contact
+Pricing
+```
+</div>
+</div>
+
+---
+
 
 # Creating and Removing Elements
 
@@ -167,63 +273,382 @@ greetAlice('Hello'); // Output: Hello, Alice
 
 ---
 
-# Asynchronous JavaScript:  Callbacks
+# Asynchronous JavaScript
 
-- A function passed as an argument to another function to be executed later.
+<div class='columns'>
+<div>
 
-## Example
-
+## Synchronous Code
 ```javascript
-function fetchData(callback) {
-    setTimeout(() => {
-        callback('Data loaded');
-    }, 2000);
+let greet_one = "Hello"
+let greet_two = "World!!!"
+
+console.log(greet_one)
+
+for(let i=0;i<1000000000;i++){
+
 }
 
-fetchData(data => {
-    console.log(data); // Output: Data loaded
+console.log(greet_two);
+```
+</div>
+<div>
+   
+## Asynchronous Code
+```javascript
+let greet_one = "Hello"
+let greet_two = "World!!!"
+
+console.log(greet_one)
+
+setTimeout(function(){
+    console.log("Asynchronous");
+}, 10000)
+
+console.log(greet_two);
+```    
+</div>
+</div>
+
+---
+
+# Callbacks
+
+<div class='columns'>
+<div>
+
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+    
+</div>
+<div>
+    
+```javascript
+function add(x,y){
+    return x+y
+}
+
+function divide(x,y){
+    return x/y
+}
+
+function compute(callBack, x, y){
+    return callBack(x,y)
+}
+
+console.log(compute(add, 10, 5))
+console.log(compute(divide, 10, 5))
+```
+</div>
+</div>
+
+
+---
+
+# Callback Hell
+
+<div class='columns'>
+<div>
+
+```javascript
+setTimeout(() =>{
+    console.log("One Second");
+    setTimeout(() =>{
+        console.log("Two Seconds");
+        setTimeout(() =>{
+            console.log("Three Seconds");
+            setTimeout(() =>{
+                console.log("Four Seconds");
+                setTimeout(() =>{
+                    console.log("Five Seconds");
+                }, 1000)
+            }, 1000)
+        }, 1000)
+    }, 1000)
+}, 1000)
+```    
+</div>
+<div>
+    
+```javascript
+function logTime() {
+    x++;
+    text = 'Passed ' + x + ' secs.'
+    console.log(text)
+    setTimeout(logTime, 1000);
+}
+
+var x = 0;
+logTime()
+```
+</div>
+</div>
+
+---
+
+# Promises
+
+<div class='columns'>
+<div>
+
+- A promise is placeholder for the future result of an asynchronous operation.
+- When using promises, we don't need to relay on callbacks which helps us avoid callback hell.
+- Promises are like lottery ticket. When we buy a lottery ticket, it says we will get money if our outcome is right.
+
+</div>
+<div>
+    
+```javascript
+const url = 'https://jsonplaceholder.typicode.com/todos'
+```
+```javascript
+const request = fetch(url)
+console.log(request)
+
+```
+
+![center](figures/promise.png)
+
+</div>
+</div>
+
+---
+
+# Consume Promises
+
+<div class='columns'>
+<div>
+
+- We make a request, we wait for the result. 
+- Then after result arrives, we perform some operation on those results.
+
+``` javascript
+const url = 'https://jsonplaceholder.typicode.com/todos'
+``` 
+``` javascript
+const request = fetch(url)
+const response = request.then((r) => {
+    console.log(r);
+    return r.json();
+})
+``` 
+</div>
+<div>
+
+``` javascript
+response.then((data) => {
+    console.log(data);
+})
+``` 
+
+![center](figures/promise_resp.png)    
+
+</div>
+</div>
+
+---
+
+# Handle Rejected Promises
+
+<div class='columns'>
+<div>
+
+- In real world situations, there could be times when our app crashes due to not handling rejected promises properly.
+
+``` javascript
+const url = 'https://jsonplaceholder.typicode.com/todos'
+``` 
+``` javascript
+const request = fetch(url)
+const response = request.then((r) => {
+    console.log(r);
+    return r.json();
+})
+``` 
+</div>
+<div>
+
+``` javascript
+response.then((data) => {
+    console.log(data);
+}).catch((error) => {
+    console.log('Oops...', error);
+}).finally(() => {
+    console.log('This always runs.')
 });
+``` 
+
+![center](figures/promise_reject.png)    
+
+</div>
+</div>
+
+---
+
+# Create a Promise
+
+- Promises are asynchronous in nature. Once we know how to create promises, we can make any piece of code asynchronous. 
+- Then it will not block code execution if the other code running is taking a long time to complete.
+
+<div class='columns'>
+<div>
+    
+```javascript
+let lottery = new Promise(
+    function(resolve, reject){
+        console.log("Lottery is happening");
+
+        setTimeout(() => {    
+            if(Math.random() >= 0.5){
+                resolve("You Won!!!")
+            }
+            else{
+                reject(new Error("Bad luck"))
+            }   
+        }, 1000);
+    }
+)
+```
+</div>
+<div>
+    
+```javascript
+lottery.then((response) =>{
+    console.log(response);
+}).catch((err) =>{
+    console.log(err);
+})
+
+```  
+</div>
+</div>
+
+
+
+---
+
+# Consume Promises using async/await
+
+- async/await is easy to use.
+- chaining the `then()` method could be very long and gets complex.
+
+
+```javascript
+async function fetchAPI () {
+    const url = 'https://cat-fact.herokuapp.com/facts';
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data);
+}
+fetchAPI()
+console.log("FIRST");
 ```
 
 ---
 
-# Asynchronous JavaScript: Promises
-- An object representing the eventual completion or failure of an asynchronous operation.
-
-## Example
+# Handle Errors with async/await
 
 ```javascript
-let promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve('Data loaded');
-    }, 2000);
-});
+async function fetchAPI () {
+    try{
+        const url = 'https://cat-fact.herokuapp.com/facts';
+        const res = await fetch(url);
+        if(!res.ok){
+            throw new Error("Custom Error");
+        }
+        const data = await res.json();
+        console.log(data);
+    } catch(err){
+        console.log(err);
+    }
+}
 
-promise.then(data => {
-    console.log(data); // Output: Data loaded
-});
+fetchAPI();
+console.log("FIRST");
+
 ```
+---
+
+# Return Values from Async Functions
+
+<div class='columns'>
+<div>
+    
+```javascript
+async function fetchAPI() {
+    try{
+        const url = 'https://cat-fact.herokuapp.com/facts';
+        const res = await fetch(url);
+        if(!res.ok){
+            throw new Error("Custom Error")
+        }
+        const data = await res.json()
+        console.log(data);
+        return "Done with fetchAPI"
+    } catch(err){
+        console.log(err);
+        throw new Error("Custom Error")
+    }
+}
+
+```
+</div>
+<div>
+    
+```javascript
+fetchAPI().then((msg) =>{
+    console.log(msg);
+}).catch((err) =>{
+    console.log(err);
+})
+```   
+</div>
+</div>
 
 ---
 
-# Async/Await
-- A syntactic sugar for working with Promises.
-- Makes asynchronous code look and behave like synchronous code.
-
-## Example
+# Run Promises in Parallel
 
 ```javascript
-async function fetchData() {
-    let data = await new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('Data loaded');
-        }, 2000);
-    });
-
-    console.log(data); // Output: Data loaded
+async function fetchAPI(country1,country2,country3){
+    try{
+        const res1 = await fetch(`https://restcountries.com/v3.1/name/${country1}`)
+        const res2 = await fetch(`https://restcountries.com/v3.1/name/${country2}`)
+        const res3 = await fetch(`https://restcountries.com/v3.1/name/${country3}`)
+        
+        const data1 = await res1.json()
+        const data2 = await res2.json()
+        const data3 = await res3.json()
+        console.log(data1[0].capital[0]);
+        console.log(data2[0].capital[0]);
+        console.log(data3[0].capital[0]);
+        return "Done with fetchAPI"
+    } catch(err){
+        console.log(err);
+        throw new Error("Custom Error")
+    }
 }
 
-fetchData();
+fetchAPI("canada", "germany", "russia")
+```
+---
+
+# Use Promise.all()
+
+- With the help of **Promise.all()**, we can run multiple promises in parallel which will boost performance. 
+- The **promise.all()** takes an array as an argument which are promises and run them in parallel.
+
+```javascript
+let promise1 = new Promise((resolve) =>{
+    setTimeout(() =>{
+       resolve("First Promise")
+    }, 2000)
+})
+
+let promise2 = Promise.resolve("Second Promise")
+
+let returnedPromises = Promise.all([promise1,promise2]).then((res) =>{
+    console.log(res);
+})
 ```
 
 ---
