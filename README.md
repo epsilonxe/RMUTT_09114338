@@ -155,7 +155,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>7</td>
-      <td><a href="node.html" target="_blank">Introduction to Backend Development</a></td>
+      <td><a href="slides/node.html" target="_blank">Introduction to Backend Development</a></td>
       <td>
         <ul>
           <li>Overview of Backend Technologies</li>
@@ -172,7 +172,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>8</td>
-      <td><a href="db.html" target="_blank">Database Integration</a></td>
+      <td><a href="slides/db.html" target="_blank">Database Integration</a></td>
       <td>
         <ul>
           <li>Introduction to Databases (SQL vs NoSQL)</li>
@@ -189,7 +189,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>9</td>
-      <td><a href="authentication.html" target="_blank">Authentication and Authorization</a></td>
+      <td><a href="slides/authentication.html" target="_blank">Authentication and Authorization</a></td>
       <td>
         <ul>
           <li>User Authentication Concepts</li>
@@ -206,7 +206,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>10</td>
-      <td><a href="react1.html" target="_blank">Frontend Frameworks - React.js</a></td>
+      <td><a href="slides/react1.html" target="_blank">Frontend Frameworks - React.js</a></td>
       <td>
         <ul>
           <li>Introduction to React.js</li>
@@ -223,7 +223,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>11</td>
-      <td><a href="react2.html" target="_blank">Advanced React.js</a></td>
+      <td><a href="slides/react2.html" target="_blank">Advanced React.js</a></td>
       <td>
         <ul>
           <li>Lifecycle Methods and Hooks</li>
@@ -240,7 +240,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
     </tr>
     <tr>
       <td>12</td>
-      <td><a href="fullstack.html" target="_blank">Building Full-stack Applications</a></td>
+      <td><a href="slides/fullstack.html" target="_blank">Building Full-stack Applications</a></td>
       <td>
         <ul>
           <li>Connecting Frontend and Backend</li>
