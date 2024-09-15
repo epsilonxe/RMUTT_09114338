@@ -255,7 +255,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
         </ul>
       </td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td>13</td>
       <td>Testing and Debugging</td>
       <td>
@@ -305,7 +305,7 @@ Concepts of computer networks and internet, use of web technologies for modern w
           <li>Deploying a Full-stack Application to the Cloud</li>
         </ul>
       </td>
-    </tr>
+    </tr> -->
   </tbody>
 </table>
 
