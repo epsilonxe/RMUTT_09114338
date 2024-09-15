@@ -11,7 +11,7 @@ theme       : descartes
 
 <div class="title">Introduction to Backend Development</div>
 <div class="subtitle">Modern Website Development</div>
-<div class="author">R. Promkam, Dr.rer.nat.</div>
+<div class="author">R. Promkam, Dr. rer. nat.</div>
 <div class="organization">Department of Mathematics and Computer Science, RMUTT</div>
 
 
@@ -145,16 +145,29 @@ node app.js
 
 ---
 
+<div class="columns">
+<div>
+ 
 ## Key Principles
 - **Stateless**: Each request from client to server must contain all necessary information.
 - **Client-Server**: Separation of client and server concerns.
-- **Uniform Interface**: Consistent and standard way of interacting with resources.
+- **Uniform Interface**: Consistent and standard way of interacting with resources.   
 
+</div>    
+<div>
+    
 ## HTTP Methods
 - **GET**: Retrieve data
 - **POST**: Create new data
 - **PUT**: Update existing data
 - **DELETE**: Delete data
+
+</div>    
+</div>
+
+
+
+
 
 ---
 
@@ -172,37 +185,262 @@ let items = [
     { id: 2, name: 'Item 2' }
 ];
 
-app.get('/items', (req, res) => {
-    res.json(items);
-});
-
-app.post('/items', (req, res) => {
-    const newItem = { id: items.length + 1, name: req.body.name };
-    items.push(newItem);
-    res.status(201).json(newItem);
-});
-
-app.put('/items/:id', (req, res) => {
-    const item = items.find(i => i.id == req.params.id);
-    if (item) {
-        item.name = req.body.name;
-        res.json(item);
-    } else {
-        res.status(404).send('Item not found');
-    }
-});
-
-app.delete('/items/:id', (req, res) => {
-    items = items.filter(i => i.id != req.params.id);
-    res.status(204).send();
-});
-
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
 ```
 
 ---
+
+# **GET** Method
+
+<div class="columns">
+<div>
+    
+```javascript
+app.get('/items', (req, res) => {
+    res.json(items);
+});
+```
+
+</div>
+<div>
+    
+- To use the **GET** method to retrieve the items array from the API, we can do so in various ways. 
+- Let try using the simplest **GET** method via a web browser:
+
+```bash
+http://localhost:3000/items
+```
+
+</div>
+</div>
+
+
+---
+
+# API Call for **GET** Method 
+
+<div class="columns">
+<div>
+    
+## Using `curl`
+
+```bash
+curl http://localhost:3000/items
+```
+
+</div>
+<div>
+    
+## Using Postman
+
+1. Open Postman and set the request type to GET.
+2. In the URL field, enter: http://localhost:3000/items.
+3. Press the Send button. 
+4. The response will appear in the Postman window, displaying the list of items in the form of JSON.
+
+</div>
+</div>
+
+---
+
+# **POST** Method
+
+```javascript
+app.post('/items', (req, res) => {
+    // Get the name from the request body
+    const itemName = req.body.name;
+
+    // Create a new item with a unique id
+    const newItem = { id: items.length + 1, name: itemName };
+
+    // Add the new item to our items list
+    items.push(newItem);
+
+    // Send a response with the new item and status code 201 (Created)
+    res.status(201).json(newItem);
+});
+
+```
+---
+
+# API Call for **POST** Method 
+
+<div class="columns">
+<div>
+    
+## Using `curl`
+
+```bash
+curl -X POST http://localhost:3000/items \
+-H "Content-Type: application/json" \
+-d '{"name": "Item 3"}'
+```
+
+</div>
+<div>
+    
+## Using Postman
+
+1. Open Postman and set the request type to POST.
+2. Enter the URL: http://localhost:3000/items.
+3. Go to the Body tab and select raw.
+4. From the dropdown next to raw, select JSON.
+5. In the text area, input the following JSON:
+
+```json
+{
+    "name": "Item 3"
+}
+```
+
+6. Click the Send button.
+
+</div>
+</div>
+
+
+---
+
+# **PUT** Method
+
+```javascript
+function findItemById(id) {
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].id == id) {
+            return items[i]; // Return the item if the id matches
+        }
+    }
+    return null; // Return null if no item is found
+}
+
+app.put('/items/:id', (req, res) => {
+    const itemId = req.params.id; // Get the id from the URL
+    const itemToUpdate = findItemById(itemId);
+
+    // If the item exists, update its name
+    if (itemToUpdate) {
+        itemToUpdate.name = req.body.name;
+        res.json(itemToUpdate); 
+    } else {
+        // If the item is not found, send a 404 error (not found)
+        res.status(404).send('Item not found');
+    }
+});
+```
+---
+
+# API Call for **PUT** Method 
+    
+## Using `curl`
+
+```bash
+curl -X PUT http://localhost:3000/items/1 \
+-H "Content-Type: application/json" \
+-d '{"name": "Updated Item 1"}'
+```
+---
+
+# API Call for **PUT** Method 
+   
+## Using Postman
+
+<div class="columns">
+<div>
+
+1. Open Postman.
+2. Select PUT as the request method from the dropdown menu (it defaults to GET).
+3. In the URL field, enter the following (Where 1 is the id of the item you want to update.):
+
+```bash
+http://localhost:3000/items/1
+```
+
+</div>    
+<div>
+    
+4. Go to the Body tab.
+5. Select raw as the body type, and then select JSON from the dropdown next to the raw option.
+6. In the text area below, enter the following JSON:
+
+```json
+{
+    "name": "Updated Item 1"
+}
+```
+
+7. Press the Send button.
+
+</div>
+</div>
+
+---
+
+# **DELETE** Method
+
+```javascript
+function deleteItemById(id) {
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].id == id) {
+            // Remove the item from the array using splice
+            items.splice(i, 1);
+            return true; // Return true if the item was found and deleted
+        }
+    }
+    return false; // Return false if no item was found with the given id
+}
+
+app.delete('/items/:id', (req, res) => {
+    const itemId = req.params.id; // Get the id from the URL
+
+    // Call the deleteItemById function
+    const itemDeleted = deleteItemById(itemId);
+
+    if (itemDeleted) {
+        res.send('Item deleted successfully'); // Send success message if item was deleted
+    } else {
+        res.status(404).send('Item not found'); // Send error if item was not found
+    }
+});
+
+
+```
+
+---
+
+
+# API Call for **DELETE** Method 
+
+<div class="columns">
+<div>
+    
+## Using `curl`
+
+```bash
+curl -X DELETE http://localhost:3000/items/1
+```
+
+</div>
+<div>
+    
+## Using Postman
+
+1. Open Postman.
+2. Select DELETE from the dropdown next to the URL field (the default is GET).
+3. In the URL field, enter:
+```bash
+http://localhost:3000/items/1
+```
+4. Replace `1` with the id of the item you want to delete.
+5. Send the request:
+6. Simply click the Send button.
+
+</div>
+</div>
+
+---
+
 
 # Workshop Activities
 
@@ -270,41 +508,11 @@ const port = 3000;
 
 app.use(express.json());
 
-let items = [
-    { id: 1, name: 'Item 1' },
-    { id: 2, name: 'Item 2' }
+let courses = [
+    { id: 1, title: 'Calculus 1' },
+    { id: 2, title: 'Calculus 2' }
 ];
-
-app.get('/items', (req, res) => {
-    res.json(items);
-});
-
-app.post('/items', (req, res) => {
-    const newItem = { id: items.length + 1, name: req.body.name };
-    items.push(newItem);
-    res.status(201).json(newItem);
-});
-
-app.put('/items/:id', (req, res) => {
-    const item = items.find(i => i.id == req.params.id);
-    if (item) {
-        item.name = req.body.name;
-        res.json(item);
-    } else {
-        res.status(404).send('Item not found');
-    }
-});
-
-app.delete('/items/:id', (req, res) => {
-    items = items.filter(i => i.id != req.params.id);
-    res.status(204).send();
-});
-
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
 ```
----
 
 2. Test the API using a tool like Postman or Curl.
 
@@ -313,38 +521,39 @@ app.listen(port, () => {
 # Testing the API with Postman
 
 ## Installing Postman
+
 - Download and install Postman from [getpostman.com](https://www.getpostman.com/).
 
 ---
 
 ## Testing Endpoints
 
-1. **GET /items**
+1. **GET /courses**
    - Open Postman and create a new request.
-   - Set the method to GET and the URL to `http://localhost:3000/items`.
+   - Set the method to GET and the URL to `http://localhost:3000/courses`.
    - Click "Send" to see the list of items.
 
-2. **POST /items**
+2. **POST /courses**
    - Change the method to POST.
-   - Set the URL to `http://localhost:3000/items`.
+   - Set the URL to `http://localhost:3000/courses`.
    - Go to the "Body" tab and select "raw" and "JSON".
-   - Enter the JSON data: `{ "name": "New Item" }`.
+   - Enter the JSON data: `{ "title": "Calculus 3" }`.
    - Click "Send" to add the new item.
 
 ---
 
 ## Testing Endpoints
 
-3. **PUT /items/:id**
+3. **PUT /courses/:id**
    - Change the method to PUT.
-   - Set the URL to `http://localhost:3000/items/1`.
+   - Set the URL to `http://localhost:3000/courses/1`.
    - Go to the "Body" tab and select "raw" and "JSON".
-   - Enter the JSON data: `{ "name": "Updated Item" }`.
+   - Enter the JSON data: `{ "title": "New Subject" }`.
    - Click "Send" to update the item.
 
-4. **DELETE /items/:id**
+4. **DELETE /courses/:id**
    - Change the method to DELETE.
-   - Set the URL to `http://localhost:3000/items/1`.
+   - Set the URL to `http://localhost:3000/courses/1`.
    - Click "Send" to delete the item.
 
 ---
@@ -362,29 +571,25 @@ app.listen(port, () => {
 1. **GET /items**
 
 ```bash
-curl -X GET http://localhost:3000/items
+curl -X GET http://localhost:3000/courses
 ```
 
-2. **POST /items**
+2. **POST /courses**
 
 ```bash
-curl -X POST http://localhost:3000/items -H "Content-Type: application/json" -d '{"name": "New Item"}'
+curl -X POST http://localhost:3000/courses -H "Content-Type: application/json" -d '{"title": "Calculus 3"}'
 ```
 
----
-
-## Testing Endpoints
-
-3. **PUT /items/:id**
+3. **PUT /courses/:id**
 
 ```bash
-curl -X PUT http://localhost:3000/items/1 -H "Content-Type: application/json" -d '{"name": "Updated Item"}'
+curl -X PUT http://localhost:3000/courses/1 -H "Content-Type: application/json" -d '{"title": "New Subject"}'
 ```
 
-4. **DELETE /items/:id**
+4. **DELETE /courses/:id**
 
 ```bash
-curl -X DELETE http://localhost:3000/items/1
+curl -X DELETE http://localhost:3000/courses/1
 ```
 
 ---
@@ -418,5 +623,5 @@ Explore Node.js fundamentals including modules such as path, url, fs, events and
 
 ## Topic: Database Integration
 - Introduction to Databases (SQL vs NoSQL)
-- Working with MongoDB
+- Working with postgreSQL and MongoDB
 
