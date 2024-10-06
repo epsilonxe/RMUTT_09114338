@@ -23,10 +23,9 @@ theme       : descartes
 
 1. *Introduction to Databases*
 2. *SQL vs NoSQL*
-3. *Introduction to PostgreSQL*
-4. *CRUD Operations with PostgreSQL*
-6. *Introduction to MongoDB*
-7. *CRUD Operations with MongoDB*
+3. *Introduction to SQLite*
+5. *Introduction to PostgreSQL*
+7. *Introduction to MongoDB*
 9. *Workshop Activities*
 
 ---
@@ -84,6 +83,259 @@ Document-based, key-value pairs, graphs, wide-columns.
 ## When to Use
 - **SQL**: Complex queries, transactions, structured data.
 - **NoSQL**: Flexible schema, scalability, unstructured data.
+
+---
+
+# Introduction to SQLite
+
+## What is SQLite?
+- A **lightweight, self-contained** SQL database engine.
+- **Serverless**: No need to set up a database server.
+- Useful for **small to medium-sized applications** or for prototyping.
+  
+## Key Features
+- **Zero Configuration**: No setup or administration needed.
+- **File-based Storage**: Stores data in a single file.
+- **Cross-Platform**: Works on multiple operating systems.
+
+---
+
+# Setting Up SQLite
+
+## 1. Installing SQLite
+
+- **Windows**: Download from [sqlite.org](https://www.sqlite.org/download.html).
+- **Mac**: Install via Homebrew: `brew install sqlite`
+- **Linux**: Install via package mamager: `sudo apt-get install sqlite3`
+
+## 2. Verify installation: 
+
+```bash
+sqlite3 --version
+```
+
+---
+
+# Setting Up SQLite
+
+## 3. Creating a Database
+- To create a database, open a terminal and type:
+
+```bash
+sqlite3 mydatabase.db
+```
+
+- This will create a new file called `mydatabase.db` for your SQLite database.
+
+---
+
+# CRUD Operations with SQLite
+
+## Creating a Table
+
+```sql
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    age INTEGER
+);
+```
+
+---
+
+# CRUD Operations with SQLite
+
+## Inserting Data
+
+```sql
+INSERT INTO users (name, age) VALUES ('Alice', 25);
+INSERT INTO users (name, age) VALUES ('Bob', 30), ('Charlie', 35);
+```
+
+## Querying Data
+
+```sql
+SELECT * FROM users;
+SELECT * FROM users WHERE name = 'Alice';
+```
+
+---
+
+# CRUD Operations with SQLite
+
+## Updating Data
+
+```sql
+UPDATE users SET age = 26 WHERE name = 'Alice';
+```
+
+## Deleting Data
+
+```sql
+DELETE FROM users WHERE name = 'Alice';
+```
+
+---
+
+# Integrating SQLite with an HTML Page
+
+## Setting Up a Node.js Server with SQLite
+
+1. **Initialize a Node.js Project and Install Required Packages**
+
+```bash
+mkdir myapp
+cd myapp
+npm init -y
+npm install express sqlite3 body-parser
+```
+
+---
+
+2. **Create a `server.js` File**
+    
+```javascript
+const express = require('express');
+const bodyParser = require('body-parser');
+const sqlite3 = require('sqlite3').verbose();
+const path = require('path');
+
+const app = express();
+const port = 3000;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname)));
+
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`)
+});
+```
+---
+
+2.1 Initialize SQLite Database   
+
+```javascript
+const db = new sqlite3.Database('./mydatabase.db');
+```
+
+2.2 **Create a users table**
+
+```javascript
+let query = `CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        age INTEGER
+)`;
+
+db.run(query);
+```
+---
+
+2.3 **Route to fetch users**
+
+```javascript 
+app.get('/users', (req, res) => {
+
+    let query = 'SELECT * FROM users';
+
+    db.all(query, (err, rows) => {
+        if (err) {
+            let msg = {error: err.message};
+            status(500).json(msg);
+        }
+        res.json(rows);
+    });
+});
+
+```
+
+---
+
+2.4 Route to add a new user
+
+```javascript 
+app.post('/users', (req, res) => {
+  const { name, age } = req.body;
+  let query = `INSERT INTO users (name, age) VALUES (?, ?)`
+  
+  db.run(query, [name, age], (err) => {
+    if (err) {
+        let msg = { error: err.message };
+        return res.status(500).json(msg);
+    }
+    res.json({ id: this.lastID, name, age });
+  });
+
+});
+```
+
+---
+
+3. **Create an `index.html` File**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLite Integration</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <form id="userForm">
+        <input type="text" id="name" placeholder="Name">
+        <input type="number" id="age" placeholder="Age">
+        <button type="submit">Add User</button>
+    </form>
+    <ul id="userList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
+---
+
+4. **Create a `script.js` File**
+4.1. **`fetchUsers` Function**
+
+```javascript
+async function fetchUsers() {
+    const response = await fetch('/users');
+    const users = await response.json();
+    const userList = document.getElementById('userList');
+    userList.innerHTML = '';
+    users.forEach(user => {
+        userList.innerHTML += `<li>${user.name} (${user.age})</li>`;
+    });
+}
+
+fetchUsers();
+```
+---
+
+4.2. **Adding a user**
+
+```javascript
+let userForm = document.getElementById('userForm');
+userForm.addEventListener('submit', async x => {
+    x.preventDefault();
+    const name = document.getElementById('name').value;
+    const age = document.getElementById('age').value;
+    const response = await fetch('/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, age })
+    });
+    const user = await response.json();
+    let userList = document.getElementById('userList');
+    userList.innerHTML += `<li>${user.name} (${user.age})</li>`;
+});
+
+```
 
 ---
 
@@ -334,6 +586,10 @@ db.users.insertMany([
 ])
 ```
 
+---
+
+# CRUD Operations with MongoDB
+
 ## Querying Documents
 
 ```javascript
@@ -370,6 +626,8 @@ npm init -y
 npm install express mongoose body-parser
 ```
 
+---
+
 2. Create a `server.js` file.
 
 ```javascript
@@ -379,6 +637,13 @@ const mongoose = require('mongoose');
 const app = express();
 const port = 3000;
 
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+});
+```
+---
+
+```javascript
 mongoose.connect('mongodb://localhost/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const userSchema = new mongoose.Schema({
@@ -395,9 +660,11 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/users', async (
+```
+---
 
-req, res) => {
+```javascript
+app.get('/users', async (req, res) => {
     try {
         const users = await User.find();
         res.json(users);
@@ -407,6 +674,10 @@ req, res) => {
     }
 });
 
+```
+---
+
+```javascript
 app.post('/users', async (req, res) => {
     const { name, age } = req.body;
     try {
@@ -418,11 +689,11 @@ app.post('/users', async (req, res) => {
         res.status(500).json({ error: 'Database error' });
     }
 });
-
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
 ```
+
+---
+
+
 
 3. Create an `index.html` file.
 
@@ -443,37 +714,43 @@ app.listen(port, () => {
     </form>
     <ul id="userList"></ul>
 
-    <script>
-        document.getElementById('userForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const age = document.getElementById('age').value;
-
-            const response = await fetch('/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, age })
-            });
-            const user = await response.json();
-            document.getElementById('userList').innerHTML += `<li>${user.name} (${user.age})</li>`;
-        });
-
-        async function fetchUsers() {
-            const response = await fetch('/users');
-            const users = await response.json();
-            const userList = document.getElementById('userList');
-            userList.innerHTML = '';
-            users.forEach(user => {
-                userList.innerHTML += `<li>${user.name} (${user.age})</li>`;
-            });
-        }
-
-        fetchUsers();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+```
+
+---
+
+4. Create an `script.js` file.
+
+```javascript
+document.getElementById('userForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const age = document.getElementById('age').value;
+
+    const response = await fetch('/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, age })
+    });
+    const user = await response.json();
+    document.getElementById('userList').innerHTML += `<li>${user.name} (${user.age})</li>`;
+});
+
+async function fetchUsers() {
+    const response = await fetch('/users');
+    const users = await response.json();
+    const userList = document.getElementById('userList');
+    userList.innerHTML = '';
+    users.forEach(user => {
+        userList.innerHTML += `<li>${user.name} (${user.age})</li>`;
+    });
+}
+
+fetchUsers();
 ```
 
 ---
@@ -491,7 +768,7 @@ app.listen(port, () => {
 
 ---
 
-# Setting Up PostgreSQL and MongoDB Activity
+<!-- # Setting Up PostgreSQL and MongoDB Activity
 
 1. Install PostgreSQL and MongoDB.
 2. Start the PostgreSQL server.
@@ -831,7 +1108,7 @@ app.listen(port, () => {
 </html>
 ```
 
----
+--- -->
 
 # Q&A
 
