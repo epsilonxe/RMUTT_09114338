@@ -275,12 +275,11 @@ app.post('/users', (req, res) => {
 3. **Create an `index.html` File**
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQLite Integration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
 </head>
 <body>
     <h1>User List</h1>
@@ -297,8 +296,18 @@ app.post('/users', (req, res) => {
 ```
 ---
 
-4. **Create a `script.js` File**
-4.1. **`fetchUsers` Function**
+4. **Add route to `server.js`**
+
+```javascript
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+```
+
+---
+
+5. **Create a `script.js` File**
+5.1. **`fetchUsers` Function**
 
 ```javascript
 async function fetchUsers() {
@@ -315,7 +324,7 @@ fetchUsers();
 ```
 ---
 
-4.2. **Adding a user**
+5.2. **Adding a user**
 
 ```javascript
 let userForm = document.getElementById('userForm');
